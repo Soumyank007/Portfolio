@@ -25,20 +25,20 @@ const NavBar = () => {
       </nav>
 
       <nav className='flex items-center justify-center flex-wrap'>
-        <motion.a href="https://linkedin.com/in/soumyank-padhy007" target={'_blank'}
+        <motion.a aria-label="LinkedInIcon" href="https://linkedin.com/in/soumyank-padhy007" target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 mr-3'
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a href="/" target={'_blank'}
+        <motion.a aria-label="GithubIcon" href="https://github.com/Soumyank-kemuri" target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 mx-3'>
           <GithubIcon />
         </motion.a>
-        <motion.a href="https://www.instagram.com/soumyank/" target={'_blank'}
+        <motion.a aria-label="InstagramIcon" href="https://www.instagram.com/soumyank/" target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 ml-3'>
