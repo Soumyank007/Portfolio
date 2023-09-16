@@ -37,7 +37,7 @@ const Logo = () => {
         <div className='flex items-center justify-center mt-2'>
             <MotionLink
                 href="/"
-                className={`w-16 h-16 bg-dark text-light rounded-full text-2xl font-bold flex items-center justify-center ${isHovered ? 'cursor-pointer' : ''}`}
+                className={`w-16 h-16 bg-dark text-light rounded-full text-2xl font-semibold flex items-center justify-center ${isHovered ? 'cursor-pointer' : ''}`}
                 onMouseOver={handleHoverStart}
                 onMouseOut={handleHoverEnd}
                 initial={{ borderColor: '#121212', borderWidth: '3px', borderRadius: '50%' }}
