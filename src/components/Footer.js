@@ -15,7 +15,7 @@ const Footer = () => {
                     By&nbsp;
                     <Link href='/' className='underline underline-offset-2'>Soumyank Padhy</Link>
                 </div>
-                <Link href='/'></Link>
+                <div/>
             </Layout>
         </footer>
     )
