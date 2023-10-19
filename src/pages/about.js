@@ -19,13 +19,13 @@ const about = () => {
             <div className='col-span-3 flex flex-col items-start justify-start'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
               <p className='font-medium'>
-                Hi, I'm Soumyank Padhy, a seasoned Full-Stack Developer with experience in creating robust and scalable web applications. With expertise in both front-end and back-end development, I deliver high-quality solutions tailored to clients needs. Always eager for new challenges, I continuously seek opportunities for growth and learning in the tech industry.              </p>
+                Hi, I&apos;m Soumyank Padhy, a seasoned Full-Stack Developer with experience in creating robust and scalable web applications. With expertise in both front-end and back-end development, I deliver high-quality solutions tailored to clients needs. Always eager for new challenges, I continuously seek opportunities for growth and learning in the tech industry.              </p>
               <p className='font-medium my-4'>
-                I understand that successful development is about more than just design. It's about creating solutions that are both aesthetically pleasing and functionally robust, ensuring a seamless and intuitive user experience.
+                I understand that successful development is about more than just design. It&apos;s about creating solutions that are both aesthetically pleasing and functionally robust, ensuring a seamless and intuitive user experience.
               </p>
               <p className='font-medium'>
-                Whether I'm working on a website, mobile app, or
-                other digital product With a focus on user-centric design I'm excited to apply my skills and passion to your next project's success.
+                Whether I&apos;m working on a website, mobile app, or
+                other digital product With a focus on user-centric design I&apos;m excited to apply my skills and passion to your next project&apos;s success.
               </p>
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
