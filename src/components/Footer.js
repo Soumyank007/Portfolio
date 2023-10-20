@@ -13,9 +13,9 @@ const Footer = () => {
                         &#x2764;
                     </span>
                     By&nbsp;
-                    <Link href='/' className='underline underline-offset-2'>Soumyank Padhy</Link>
+                    <Link href='/' className='hover:underline hover:underline-offset-4'>Soumyank Padhy</Link>
                 </div>
-                <div/>
+                <div />
             </Layout>
         </footer>
     )
