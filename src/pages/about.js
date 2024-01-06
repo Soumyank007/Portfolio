@@ -11,7 +11,7 @@ const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 })
-  const isInView = useInView(ref,{once:true});
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -40,7 +40,7 @@ const about = () => {
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
-          <AnimatedText className='mb-16' text='Passion fuels purpose' />
+          <AnimatedText className='mb-16' text='Passion Ignites Progress' />
           <div className='grid w-full grid-cols-8 gap-16'>
             <div className='col-span-3 flex flex-col items-start justify-start'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
