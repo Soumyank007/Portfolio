@@ -15,7 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         circleStar: 'url(/images/svgs/circle-star.svg)',
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#ffffff 5px,#ffffff 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 1px,#ffffff 5px,#ffffff 100px);'
       },
       colors: {
         dark: '#1b1b1b',

@@ -3,10 +3,11 @@ import Head from 'next/head'
 import React, { useEffect, useRef } from 'react'
 import Layout from './../components/Layout';
 import Image from 'next/image';
-import profilePic from 'public/images/profile/SP_1_bg_removed.png'
+import lightPic from 'public/images/profile/Soumyank-light.jpg'
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
+import Education from '@/components/Education';
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -37,7 +38,7 @@ const about = () => {
     <>
       <Head>
         <title>About | Soumyank Padhy</title>
-        <meta name='description' content='any description' />
+        <meta name="description" content="Explore the journey of Soumyank Padhy. Learn about his passion for technology, skills in full-stack development, and dedication to creating innovative solutions." />
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
@@ -57,8 +58,7 @@ const about = () => {
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-              {/* Have to Change this image with a better one */}
-              <Image src={profilePic} alt='alt' className='w-full h-auto rounded-2xl' />
+              <Image src={lightPic} alt='alt' className='w-full h-auto rounded-2xl' />
             </div>
             <div className='col-span-2 flex flex-col items-end justify-between'>
               <div className='flex flex-col items-end justify-center'>
@@ -83,6 +83,7 @@ const about = () => {
           </div>
           <Skills />
           <Experience />
+          <Education />
         </Layout>
       </main>
     </>

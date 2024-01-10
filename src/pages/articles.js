@@ -6,7 +6,7 @@ const articles = () => {
     <>
     <Head>
       <title>Articles | Soumyank Padhy</title>
-      <meta name='description' content='any description' />
+      <meta name='description' content='Explore Soumyank Padhy&#39;s collection of insightful articles.Engage with insightful articles on web development, technology trends, and creative musings. Stay informed, inspired, and join the dialogue.' />
     </Head>
     </>
   )
