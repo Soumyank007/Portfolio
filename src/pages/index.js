@@ -34,7 +34,7 @@ export default function Home() {
                 With a knack for full-stack wizardry, I specialize in bringing your ideas to life through innovative web applications. Dive into my latest projects and insightful articles, highlighting my expertise in web development and design.
               </p>
               <div className='flex items-center self-start mt-2'>
-                <Link href="/Soumyank_padhy-resume.pdf" className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark' target={'blank'}>Resume<LinkArrow className={'w-6 ml-1'} /></Link>
+                <Link href="/Soumyank_Padhy_Resume.pdf" className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark' target={'blank'}>Resume<LinkArrow className={'w-6 ml-1'} /></Link>
                 <HireMe className='ml-16' />
               </div>
             </div>
