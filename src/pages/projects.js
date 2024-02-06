@@ -11,18 +11,23 @@ import docpuzzleImg from '../../public/images/projects/docpuzzlehome.png';
 import jobportalImg from '../../public/images/projects/jobportal.png';
 import rcmsImg from '../../public/images/projects/rcms.png';
 import { useState } from 'react';
+import { motion } from 'framer-motion'
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-2xl" />
-
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
         href={link}
         target="_blank"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage src={img} alt={title} className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
         <span className="text-primary font-medium text-xl">{type}</span>
@@ -53,11 +58,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   );
 };
 
-const Project = ({ summary, title, img, link, github,type }) => {
+const Project = ({ summary, title, img, link, github, type }) => {
   const [showSummary, setShowSummary] = useState(false);
 
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light relative p-6 overflow-hidden">
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light relative p-6">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.1rem] bg-dark rounded-br-3xl" />
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg relative"
         href={link}
@@ -66,23 +72,23 @@ const Project = ({ summary, title, img, link, github,type }) => {
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-      <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl">{type}</span>
         <Link className="relative" href={link} target="_blank">
           <div className="flex items-center">
             <h2 className="hover:underline underline-offset-2 my-2 w-full text-left text-3xl font-bold">
               {title}{' '}
-              </h2>
-              <span
-                className="ml-2 cursor-pointer rounded-full bg-light p-2"
-                onMouseEnter={() => setShowSummary(true)}
-                onMouseLeave={() => setShowSummary(false)}
-              >
-                ℹ️
-              </span>
+            </h2>
+            <span
+              className="ml-2 cursor-pointer rounded-full bg-light p-2"
+              onMouseEnter={() => setShowSummary(true)}
+              onMouseLeave={() => setShowSummary(false)}
+            >
+              ℹ️
+            </span>
           </div>
         </Link>
         {showSummary && (
-        <p className="my-2 font-medium text-dark">{summary}</p>
+          <p className="my-2 font-medium text-dark">{summary}</p>
         )}
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
@@ -141,7 +147,7 @@ const projects = () => {
                 title="Docpuzzle"
                 summary="Docpuzzle is a Puzzle Creation Tool created using VueJS, Vuetify, NuxtJS, Tailwind CSS, Kuroco(Headless CMS).Users can create test's from various types of documents easily.I worked mainly on UI changes for this project"
                 link="https://Docpuzzle.com"
-                type="Project | Diverta & Kemuri Technology"
+                type="Project | Kemuri Technology"
                 img={docpuzzleImg}
               />
             </div>
@@ -159,7 +165,7 @@ const projects = () => {
               <Project
                 title="RCMS"
                 summary="RCMS is a Headless Content Management Based on PHP.During my tenure at Kemuri Technology,I developed various Features and Fixed many intricate bugs for a variety of client project's based on RCMS."
-                type="Project | Diverta & Kemuri Technology"
+                type="Project | Kemuri Technology"
                 link="https://www.diverta.asia/topics_list20"
                 img={rcmsImg}
               />

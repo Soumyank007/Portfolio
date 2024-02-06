@@ -15,7 +15,7 @@ const CustomLink = ({ href, title, className = '' }) => {
   )
 }
 const NavBar = () => {
-  return (
+    return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
       <nav className='select-none'>
         <CustomLink href="/" title="Home" className='mr-4' />
@@ -32,7 +32,7 @@ const NavBar = () => {
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a aria-label="GithubIcon" href="https://github.com/Soumyank-kemuri" target={'_blank'}
+        <motion.a aria-label="GithubIcon" href="https://github.com/soumyank007" target={'_blank'}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className='w-6 mx-3'>
@@ -48,7 +48,7 @@ const NavBar = () => {
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
       </div>
-    </header>
+          </header>
   )
 }
 
