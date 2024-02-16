@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
-      <Layout className="pt-0 md:p-32 sm:pt-16">
+      <Layout className="pt-0 md:p-28 sm:pt-12">
           <div className="flex items-center justify-between w-full relative lg:flex-col">
             <div className="w-1/3 md:w-[20rem] relative md:mb-4">
               <Image
