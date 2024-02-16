@@ -1,9 +1,13 @@
 import React, { useCallback } from 'react'
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import { useSelector } from 'react-redux';
 
 
 const ParticlesContainer = () => {
+    const darkMode = useSelector((state) => state.theme.darkMode);
+    const getColorValue = () => (darkMode ? '#F5F5F5' : '#000000');
+
     const particlesInit = useCallback(async (engine) => {
         await loadFull(engine);
     }, []);
@@ -48,10 +52,10 @@ const ParticlesContainer = () => {
                 },
                 particles: {
                     color: {
-                        value: '#000000',
+                        value: getColorValue(),
                     },
                     links: {
-                        color: '#000000',
+                        color: getColorValue(),
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

@@ -40,12 +40,12 @@ const about = () => {
         <title>About | Soumyank Padhy</title>
         <meta name="description" content="Explore the journey of Soumyank Padhy. Learn about his passion for technology, skills in full-stack development, and dedication to creating innovative solutions." />
       </Head>
-      <main className='flex w-full flex-col items-center justify-center'>
+      <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
-          <AnimatedText className='mb-16' text='Passion Ignites Progress' />
+          <AnimatedText className='mb-16' text='Passion Ignites Progress!' />
           <div className='grid w-full grid-cols-8 gap-16'>
             <div className='col-span-3 flex flex-col items-start justify-start'>
-              <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
+              <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
               <p className='font-medium'>
                 Hi, I&apos;m Soumyank Padhy, a seasoned Full-Stack Developer with experience in creating robust and scalable web applications. With expertise in both front-end and back-end development, I deliver high-quality solutions tailored to clients needs. Always eager for new challenges, I continuously seek opportunities for growth and learning in the tech industry.              </p>
               <p className='font-medium my-4'>
@@ -56,28 +56,28 @@ const about = () => {
                 other digital product With a focus on user-centric design I&apos;m excited to apply my skills and passion to your next project&apos;s success.
               </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-              <Image src={lightPic} alt='alt' className='w-full h-auto rounded-2xl' />
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
+              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light' />
+              <Image priority src={lightPic} alt='alt' className='w-full h-auto rounded-2xl' />
             </div>
             <div className='col-span-2 flex flex-col items-end justify-between'>
               <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={20} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>Projects Completed</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Projects Completed</h2>
               </div>
               <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={40} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>Coding Skills</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Coding Skills</h2>
               </div>
               <div className='flex flex-col items-end justify-center'>
-                <span className='inline-block text-7xl font-bold'>
+                <span className='inline-block text-7xl font-bold'> 
                   <AnimatedNumbers value={4} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>Years of experience</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Years of experience</h2>
               </div>
             </div>
           </div>

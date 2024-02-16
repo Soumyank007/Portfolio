@@ -12,7 +12,7 @@ const Logo = () => {
         setIsHovered(true);
 
         await controls.start({
-            borderColor: ['#121212', 'rgba(131,58,180,1)', 'rgba(253,29,29,1)', 'rgba(252,176,69,1)', 'rgba(131,58,180,1)', '#121212'],
+            borderColor: ['#F5F5F5', 'rgba(131,58,180,1)', 'rgba(253,29,29,1)', 'rgba(252,176,69,1)', 'rgba(131,58,180,1)', '#F5F5F5'],
             borderWidth: ['3px', '3px', '3px', '3px', '3px', '3px'],
             borderRadius: ['50%', '50%', '50%', '50%', '50%', '50%'],
             rotate: [0, 0, 0, 0, 0, 360],
@@ -25,7 +25,7 @@ const Logo = () => {
         controls.stop(); // Stop the animation
 
         controls.start({
-            borderColor: ['#121212'],
+            borderColor: ['#F5F5F5'],
             borderWidth: '2px',
             borderRadius: '50%',
             rotate: 0, // Reset rotation
@@ -40,7 +40,7 @@ const Logo = () => {
                 className={`w-16 h-16 bg-dark text-light rounded-full text-2xl font-semibold flex items-center justify-center ${isHovered ? 'cursor-pointer' : ''}`}
                 onMouseOver={handleHoverStart}
                 onMouseOut={handleHoverEnd}
-                initial={{ borderColor: '#121212', borderWidth: '3px', borderRadius: '50%' }}
+                initial={{ borderColor: '#F5F5F5', borderWidth: '3px', borderRadius: '50%' }}
                 animate={controls}
             >
                 SP

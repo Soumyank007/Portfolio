@@ -13,9 +13,9 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         >
             <h3 className='capitalize font-bold text-2xl'>
                 {position}&nbsp;
-                <a target='_blank' href={companyLink} className='text-primary capitalize'><br />@{company}</a>
+                <a target='_blank' href={companyLink} className='text-primary capitalize dark:text-primaryDark'><br />@{company}</a>
             </h3>
-            <span className='capitalize font-medium text-dark/75'>
+            <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
                 {time} | {address}
             </span>
             <p className='font-medium w-full'>
@@ -37,7 +37,7 @@ const Experience = () => {
                 Experience
             </h2>
             <div ref={ref} className='w-[75%] mx-auto relative'>
-                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' />
+                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light' />
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
                     <Details position='Full Stack Developer' company='Freelance' time='Sept 2023 - Present' work='Working as an Freelance developer on a variety of technologies like Next JS, React Native, Node JS, MongoDB, SpingBoot, AWS and more.'
                         companyLink='www.kemuri.in' address='Bangalore,India' />

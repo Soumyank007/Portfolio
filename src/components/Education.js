@@ -14,7 +14,7 @@ const Details = ({type,time,place,info }) => {
             <h3 className='capitalize font-bold text-2xl'>
                 {type}&nbsp;
             </h3>
-            <span className='capitalize font-medium text-dark/75'>
+            <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
                 {time} | {place}
             </span>
             <p className='font-medium w-full'>
@@ -36,7 +36,7 @@ const Education = () => {
                 Education
             </h2>
             <div ref={ref} className='w-[75%] mx-auto relative'>
-                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' />
+                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light' />
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
                     <Details type='Bachelor of Technology' time='2019-2023' place='Institute of Technical Education and Research Bhubaneswar,Odisha' info='Computer Science' />
                     <Details type='Higher Secondary Education' time='2017-2019' place='Swarajya senior Secondary School Alwar,Rajasthan' info='NWAC' />

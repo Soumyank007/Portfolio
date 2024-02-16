@@ -5,6 +5,7 @@ module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       animation: {
@@ -14,8 +15,8 @@ module.exports = {
         mont: ['var(--font-mont)', ...fontFamily.sans],
       },
       backgroundImage: {
-        circleStar: 'url(/images/svgs/circle-star.svg)',
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 1px,#ffffff 5px,#ffffff 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 1px,#ffffff 8px,#ffffff 100px);',
+        circularDark:  'repeating-radial-gradient(rgba(255,255,255,0.5) 1px,#1b1b1b 8px,#1b1b1b 100px);'
       },
       colors: {
         dark: '#1b1b1b',
