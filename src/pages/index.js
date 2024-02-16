@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Hi I&#39;m Soumyank Padhy, a tech enthusiast and full-stack web developer. Explore my journey, delve into innovative web solutions, and gain insights into the ever-evolving tech landscape." />
       </Head>
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <Layout className="pt-0 md:p-16 sm:pt-8">
+        <Layout className="pt-0 md:p-8 sm:pt-4">
           <div className="flex items-center justify-between w-full relative lg:flex-col">
             <div className="w-1/3 md:w-[18rem] relative md:mb-4">
               <Image
