@@ -12,6 +12,7 @@ import jobportalImg from '../../public/images/projects/jobportal.png';
 import rcmsImg from '../../public/images/projects/rcms.png';
 import { useState } from 'react';
 import { motion } from 'framer-motion'
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
 
@@ -123,6 +124,7 @@ const projects = () => {
           content="Greetings! I'm Soumyank Padhy a passionate web developer and tech enthusiast.Explore my projects, insights, and the intersection of technology and creativity."
         />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText className="mb-16 lg:!text-7xl sm:mb-8 sm:!!text-6xl xs:!text-4xl" text="Projects i have worked on" />
