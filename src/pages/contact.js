@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import { useRouter } from 'next/router';
+import TransitionEffect from '@/components/TransitionEffect';
 
 export default function Contact() {
     const [showAlert, setShowAlert] = useState(false);
@@ -34,7 +35,7 @@ export default function Contact() {
                 <title>Contact | Soumyank Padhy</title>
                 <meta name="description" content="Contact Soumyank Padhy for your queries and lead to a journey of building something big" />
             </Head>
-
+            <TransitionEffect />
             <Layout>
             {showAlert && (
             <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md mb-4" role="alert">
