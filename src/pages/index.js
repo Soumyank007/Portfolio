@@ -18,10 +18,10 @@ export default function Home() {
         <meta name="description" content="Hi I&#39;m Soumyank Padhy, a tech enthusiast and full-stack web developer. Explore my journey, delve into innovative web solutions, and gain insights into the ever-evolving tech landscape." />
       </Head>
       <TransitionEffect />
-      <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <Layout className="pt-0 md:p-8 sm:pt-4">
+      <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
+      <Layout className="pt-0 md:p-32 sm:pt-16">
           <div className="flex items-center justify-between w-full relative lg:flex-col">
-            <div className="w-1/3 md:w-[18rem] relative md:mb-4">
+            <div className="w-1/3 md:w-[20rem] relative md:mb-4">
               <Image
                 priority
                 sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw'
@@ -43,11 +43,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </Layout>
-        <HireMe className='ml-16' />
         <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
           <Image src={lightBulb} alt='alt' className='w-full h-auto' />
         </div>
+        </Layout>
+        <HireMe className='ml-16' />
       </main>
     </>
   );
