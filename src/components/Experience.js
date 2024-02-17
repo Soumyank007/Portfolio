@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import Lilcon from './Lilcon'
+import Link from 'next/link';
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
     const ref = useRef(null);
@@ -13,7 +14,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         >
             <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>
                 {position}&nbsp;
-                <a target='_blank' href={companyLink} className='text-primary capitalize dark:text-primaryDark'><br />@{company}</a>
+                <Link target='_blank' href={companyLink} className='text-primary capitalize dark:text-primaryDark'><br />@{company}</Link>
             </h3>
             <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
                 {time} | {address}
@@ -40,11 +41,11 @@ const Experience = () => {
                 <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]' />
                 <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                     <Details position='Full Stack Developer' company='Freelance' time='Sept 2023 - Present' work='Working as an Freelance developer on a variety of technologies like Next JS, React Native, Node JS, MongoDB, SpingBoot, AWS and more.'
-                        companyLink='www.kemuri.in' address='Bangalore,India' />
+                        companyLink='https://upwork.com/freelancers/~01f29fcc909f522214' address='Bangalore,India' />
                     <Details position='Systems Engineer' company='Kemuri Technology' time='Dec 2022 - Sept 2023' work='Developed features for Headless CMS (RCMS) projects, optimizing content management with PHP, JavaScript, and Postgres. Delivered diverse client projects with Nuxt JS, Vue JS, React JS, Node JS, Django, and Flutter. Introduced automated testing (Katalon, Puppeteer) for robust software quality, including real-time testing. Managed servers directly using SSH, created API load testing scripts with Node JS and JMeter. Integrated third-party REST APIs and JavaScript frameworks, resolving intricate code issues through systematic debugging. Implemented GitHub Actions and Docker for efficient CI/CD operations. Applied code optimization techniques for clean, efficient, and high-performance coding.'
-                        companyLink='www.kemuri.in' address='Bangalore,India' />
+                        companyLink='https://kemuri.in' address='Bangalore,India' />
                     <Details position='Systems Engineer Intern' company='Kemuri Technology' time='Sept 2022 - Dec 2022' work='Significantly contributed to Headless CMS projects, Nuxt JS, Vue JS, and led the development of a Django website from inception to completion.'
-                        companyLink='www.kemuri.in' address='Bangalore,India' />
+                        companyLink='https://kemuri.in' address='Bangalore,India' />
                 </ul>
             </div>
         </div>

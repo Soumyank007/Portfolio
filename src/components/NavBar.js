@@ -3,7 +3,7 @@ import Logo from './Logo'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons'
+import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon, UpworkIcon } from './Icons'
 import useThemeSwitcher from '@/hooks/useThemeSwitcher'
 import { useDispatch } from 'react-redux';
 import { toggleTheme } from '@/store/reducers/themeSlice';
@@ -68,10 +68,16 @@ const NavBar = () => {
             className='w-6 mx-3'>
             <GithubIcon />
           </motion.a>
+          <motion.a aria-label="UpworkIcon" href="https://upwork.com/freelancers/~01f29fcc909f522214" target={'_blank'}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className='w-6 mx-3'>
+                <UpworkIcon />
+          </motion.a>
           <motion.a aria-label="InstagramIcon" href="https://www.instagram.com/soumyank/" target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className='ml-3 mr-3 mb-1'>
+            className='mx-3 mb-1'>
             <InstagramIcon />
           </motion.a>
           <button aria-label='modepc'
@@ -114,6 +120,12 @@ const NavBar = () => {
                 whileTap={{ scale: 0.9 }}
                 className='w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1'>
                 <GithubIcon />
+              </motion.a>
+              <motion.a aria-label="UpworkIcon" href="https://upwork.com/freelancers/~01f29fcc909f522214" target={'_blank'}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className='w-6 sm:mx-1 mx-3'>
+                <UpworkIcon />
               </motion.a>
               <motion.a aria-label="InstagramIcon" href="https://www.instagram.com/soumyank/" target={'_blank'}
                 whileHover={{ y: -2 }}
