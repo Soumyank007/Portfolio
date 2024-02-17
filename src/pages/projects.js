@@ -93,7 +93,7 @@ const Project = ({ summary, title, img, link, github, type }) => {
             </span>
           </div>
         {showSummary && (
-          <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
+          <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">{summary}</p>
         )}
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
