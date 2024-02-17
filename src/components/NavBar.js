@@ -118,7 +118,7 @@ const NavBar = () => {
               <motion.a aria-label="InstagramIcon" href="https://www.instagram.com/soumyank/" target={'_blank'}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className='ml-3'>
+                className='sm:mx-1 mx-3 mb-1'>
                 <InstagramIcon />
               </motion.a>
             </nav>
