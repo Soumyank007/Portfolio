@@ -84,7 +84,7 @@ const Project = ({ summary, title, img, link, github, type }) => {
             </h2>
             </Link>
             <span
-              className="ml-2 cursor-pointer rounded-full bg-light p-2 dark:bg-dark"
+              className="ml-2 cursor-pointer rounded-full bg-light p-2 dark:bg-dark sm:text-sm"
               onClick={() => showSummary === true ? setShowSummary(false) : setShowSummary(true)}
               onMouseEnter={() => setShowSummary(true)}
               onMouseLeave={() => setShowSummary(false)}
