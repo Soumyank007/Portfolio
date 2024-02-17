@@ -74,26 +74,26 @@ const NavBar = () => {
             className='ml-3 mr-3 mb-1'>
             <InstagramIcon />
           </motion.a>
-          <button onClick={() => { dispatch(toggleTheme()); setMode(mode === 'light' ? 'dark' : 'light'); }}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
+          <button aria-label='modepc'
+            onClick={() => {
+              dispatch(toggleTheme());
+              setMode(mode === 'light' ? 'dark' : 'light');
+            }}
+            className={`mx-1 text-xs h-8 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+              }`}
           >
-            {
-              mode === 'dark' ?
-                <SunIcon className={'fill-dark'} />
-                :
-                <MoonIcon className={'fill-dark'} />
-            }
-
+            {mode === 'dark' ? <SunIcon className={'fill-light h-4 mx-1'} /> : <MoonIcon className={'fill-dark h-4 mx-1'} />}
+            <span className="whitespace-nowrap mr-1 font-semibold">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
           </button>
         </nav>
       </div>
       {
         isOpen ?
           <motion.div
-          initial={{scale:0,opacity:0,x:'-50%',y:'-50%'}}
-          animate={{scale:1,opacity:1}}
-          transition={{duration:0.12}}
-           className='min-w-[70vw] z-30 flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
+            initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.12 }}
+            className='min-w-[70vw] z-30 flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
             <nav className='select-none flex items-center flex-col justify-center'>
               <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} />
               <CustomMobileLink href="/about" title="About" className='' toggle={handleClick} />
@@ -118,21 +118,21 @@ const NavBar = () => {
               <motion.a aria-label="InstagramIcon" href="https://www.instagram.com/soumyank/" target={'_blank'}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className='ml-3 mr-3 mb-1 sm:mx-1'>
+                className='ml-3'>
                 <InstagramIcon />
               </motion.a>
-              <button onClick={() => { dispatch(toggleTheme()); setMode(mode === 'light' ? 'dark' : 'light'); }}
-                className={`ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
-              >
-                {
-                  mode === 'dark' ?
-                    <SunIcon className={'fill-dark'} />
-                    :
-                    <MoonIcon className={'fill-dark'} />
-                }
-
-              </button>
             </nav>
+            <button aria-label='modemobile'
+              onClick={() => {
+                dispatch(toggleTheme());
+                setMode(mode === 'light' ? 'dark' : 'light');
+              }}
+              className={` mt-8 text-xs h-8 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+                }`}
+            >
+              {mode === 'dark' ? <SunIcon className={'fill-light h-4 mx-1'} /> : <MoonIcon className={'fill-dark h-4 mx-1'} />}
+              <span className="whitespace-nowrap mr-1 font-semibold">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+            </button>
           </motion.div>
           : null
       }
