@@ -93,7 +93,7 @@ const NavBar = () => {
             initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.12 }}
-            className='min-w-[90vw] z-30 flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-28'>
+            className='min-w-[90vw] z-30 flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
             <nav className='select-none flex items-center flex-col justify-center'>
               <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} />
               <CustomMobileLink href="/about" title="About" className='' toggle={handleClick} />
