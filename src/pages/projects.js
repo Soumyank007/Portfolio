@@ -77,20 +77,21 @@ const Project = ({ summary, title, img, link, github, type }) => {
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">{type}</span>
-        <Link className="relative" href={link} target="_blank">
           <div className="flex items-center">
-            <h2 className="hover:underline underline-offset-2 my-2 w-full text-left text-3xl font-bold dark:text-light lg:text-2xl">
+            <Link className="relative" href={link} target="_blank">
+             <h2 className="hover:underline underline-offset-2 my-2 w-full text-left text-3xl font-bold dark:text-light lg:text-2xl sm:text-sm">
               {title}{' '}
             </h2>
+            </Link>
             <span
               className="ml-2 cursor-pointer rounded-full bg-light p-2 dark:bg-dark"
+              onClick={() => showSummary === true ? setShowSummary(false) : setShowSummary(true)}
               onMouseEnter={() => setShowSummary(true)}
               onMouseLeave={() => setShowSummary(false)}
             >
               ℹ️
             </span>
           </div>
-        </Link>
         {showSummary && (
           <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         )}
