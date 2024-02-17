@@ -4,10 +4,11 @@ import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
-import article1 from '../../public/images/articles/work-life_balance.jpg';
+import article1 from '../../../public/images/articles/work-life_balance.jpg';
 import { motion, useMotionValue } from 'framer-motion'
 import TransitionEffect from '@/components/TransitionEffect'
 const FramerImage = motion(Image);
+
 
 const MovingImg = ({ title, img, link }) => {
   const x = useMotionValue(0);
@@ -92,11 +93,11 @@ const articles = () => {
         <Layout className='pt-16'>
           <AnimatedText text='Words Shape Our World' className='mb-16 lg:!text-7xl sm:mb-8 sm:!!text-6xl xs:!text-4xl' />
           <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
-            <FeaturedArticle title="Navigating Work and Life in the Dynamic World of Software Development" img={article1} summary="Navigate the dynamic world of software development with a focus on work-life balance. Explore effective time management, continuous learning without burnout, and self-care rituals. Adapt to remote work challenges and understand the positive impact of balance on individual success and the broader software development community. Master the art of equilibrium for lasting fulfillment." link='/' time='5 min read' />
+            <FeaturedArticle title="Navigating Work and Life in the Dynamic World of Software Development" img={article1} summary="Navigate the dynamic world of software development with a focus on work-life balance. Explore effective time management, continuous learning without burnout, and self-care rituals. Adapt to remote work challenges and understand the positive impact of balance on individual success and the broader software development community. Master the art of equilibrium for lasting fulfillment." link='/articles/work-life-balance' time='5 min read' />
           </ul>
           <h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>All Articles</h2>
           <ul>
-            <Article title="Navigating Work and Life in the Dynamic World of Software Development" img={article1} link='/' date='05 Feb 2024' />
+            <Article title="Navigating Work and Life in the Dynamic World of Software Development" img={article1} link='/articles/work-life-balance' date='05 Feb 2024' />
           </ul>
         </Layout>
       </main>
