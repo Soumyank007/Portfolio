@@ -83,7 +83,7 @@ const NavBar = () => {
               }`}
           >
             {mode === 'dark' ? <SunIcon className={'fill-light h-4 mx-1'} /> : <MoonIcon className={'fill-dark h-4 mx-1'} />}
-            <span className="whitespace-nowrap mr-1 font-semibold">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+            <span className="whitespace-nowrap mr-1 font-medium">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
           </button>
         </nav>
       </div>
@@ -131,7 +131,7 @@ const NavBar = () => {
                 }`}
             >
               {mode === 'dark' ? <SunIcon className={'fill-light h-4 mx-1'} /> : <MoonIcon className={'fill-dark h-4 mx-1'} />}
-              <span className="whitespace-nowrap mr-1 font-semibold">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+              <span className="whitespace-nowrap mr-1 font-medium">{mode === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
             </button>
           </motion.div>
           : null
