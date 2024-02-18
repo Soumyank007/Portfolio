@@ -12,7 +12,9 @@ import jobportalImg from '../../public/images/projects/jobportal.png';
 import rcmsImg from '../../public/images/projects/rcms.png';
 import { useState } from 'react';
 import { motion } from 'framer-motion'
-import TransitionEffect from '@/components/TransitionEffect';
+import dynamic from 'next/dynamic';
+
+const TransitionEffect = dynamic(() => import('@/components/TransitionEffect'));
 
 const FramerImage = motion(Image);
 

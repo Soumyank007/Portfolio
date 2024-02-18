@@ -2,13 +2,14 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 import profilePic from '../../public/images/profile/SP_1_bg_removed.png';
 import Head from 'next/head';
-import ParticlesContainer from '@/components/ParticlesContainer';
+import dynamic from 'next/dynamic';
 import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
 import { LinkArrow } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg';
-import TransitionEffect from '@/components/TransitionEffect';
+const ParticlesContainer = dynamic(() => import('@/components/ParticlesContainer'), { ssr: false });
+const TransitionEffect = dynamic(() => import('@/components/TransitionEffect'), { ssr: false });
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
-      <Layout className="pt-0 md:p-28 sm:pt-12">
+        <Layout className="pt-0 md:p-28 sm:pt-12">
           <div className="flex items-center justify-between w-full relative lg:flex-col">
             <div className="w-1/3 md:w-[20rem] relative md:mb-4">
               <Image
@@ -43,9 +44,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
-          <Image src={lightBulb} alt='alt' className='w-full h-auto' />
-        </div>
+          <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
+            <Image src={lightBulb} alt='alt' className='w-full h-auto' />
+          </div>
         </Layout>
         <HireMe className='ml-16' />
       </main>

@@ -8,7 +8,9 @@ import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
-import TransitionEffect from '@/components/TransitionEffect';
+import dynamic from 'next/dynamic';
+
+const TransitionEffect = dynamic(() => import('@/components/TransitionEffect'), { ssr: false });
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
