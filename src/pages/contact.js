@@ -3,9 +3,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-
-const TransitionEffect = dynamic(() => import('@/components/TransitionEffect'), { ssr: false });
+import TransitionEffect from '@/components/TransitionEffect';
 
 export default function Contact() {
     const [showAlert, setShowAlert] = useState(false);
