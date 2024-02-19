@@ -48,7 +48,7 @@ const NavBar = () => {
       </button>
       <div className='w-full flex justify-between items-center lg:hidden'>
         <nav className='select-none'>
-          <CustomLink href="/" title="Home" toggle={handleClick} />
+          <CustomLink href="/" title="Home" className='mr-4' toggle={handleClick} />
           <CustomLink href="/about" title="About" className='mx-4' />
           <CustomLink href="/projects" title="Projects" className='mx-4' />
           <CustomLink href="/articles" title="Articles" className='ml-4' />
