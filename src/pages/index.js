@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
-            <Image priority src={lightBulb} alt='alt' className='w-full h-auto' />
+            <Image sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw' src={lightBulb} alt='alt' className='w-full h-auto' />
           </div>
         </Layout>
         <HireMe className='ml-16' />
