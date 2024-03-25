@@ -1,5 +1,3 @@
-import Footer from '@/components/Footer'
-import NavBar from '@/components/NavBar'
 import '@/styles/globals.css'
 import { Montserrat } from 'next/font/google'
 import Head from 'next/head'
@@ -7,11 +5,15 @@ import { store } from '@/store/store.js';
 import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 const monserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-mont'
 })
+
+const NavBar = dynamic(() => import('@/components/NavBar'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
