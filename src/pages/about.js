@@ -49,7 +49,7 @@ const about = () => {
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2  md:col-span-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
               <p className='font-medium'>
-                Hi, I&apos;m Soumyank Padhy, a seasoned Full-Stack Developer with experience in creating robust and scalable web applications. With expertise in both front-end and back-end development, I deliver high-quality solutions tailored to clients needs. Always eager for new challenges, I continuously seek opportunities for growth and learning in the tech industry.              </p>
+                Hi, I&apos;m <strong>Soumyank Padhy</strong>, a seasoned Full-Stack Developer with experience in creating robust and scalable web applications. With expertise in both front-end and back-end development, I deliver high-quality solutions tailored to clients needs. Always eager for new challenges, I continuously seek opportunities for growth and learning in the tech industry.              </p>
               <p className='font-medium my-4'>
                 I understand that successful development is about more than just design. It&apos;s about creating solutions that are both aesthetically pleasing and functionally robust, ensuring a seamless and intuitive user experience.
               </p>
