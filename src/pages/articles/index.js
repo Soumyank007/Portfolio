@@ -10,6 +10,7 @@ import { client } from '@/lib/sanityClient'
 import dayjs from 'dayjs'
 const FramerImage = motion(Image);
 
+export const revalidate = 30;
 
 export async function getStaticProps() {
   const query = `*[_type == "post"]{
