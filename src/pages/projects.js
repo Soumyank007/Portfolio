@@ -42,7 +42,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">{summary}</p>
         <div className="mt-2 flex items-center">
           {github && (
-            <Link className="w-10" href={github} target="_blank">
+            <Link aria-label='Github' className="w-10" href={github} target="_blank">
               <GithubIcon />
             </Link>
           )}

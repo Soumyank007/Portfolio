@@ -23,7 +23,7 @@ module.exports = {
         circularDarkMd: 'repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 60px)',
         circularLightSm: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)',
         circularDarkSm: 'repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 40px)',
-    },    
+      },
       colors: {
         dark: '#1b1b1b',
         luxury: '#ae6d50',
@@ -39,7 +39,7 @@ module.exports = {
       md: { max: '767px' },
       sm: { max: '639px' },
       xs: { max: '479px' },
+    },
   },
-  },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),],
 }

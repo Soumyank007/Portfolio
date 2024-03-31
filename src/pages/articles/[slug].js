@@ -1,35 +1,93 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+import { React } from 'react';
+import { client } from '@/lib/sanityClient'
+import { PortableText } from '@portabletext/react'
+import TransitionEffect from '@/components/TransitionEffect';
+import Image from 'next/image'
 import AnimatedText from '@/components/AnimatedText';
+import CustomCodeBlock from '@/components/CustomCodeBlock';
+import Head from 'next/head'
 
-const Article = ({ article }) => (
-  <Layout>
-    <article className="max-w-3xl mx-auto p-6">
-      <AnimatedText className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' text={article.title} />
-      <p className="dark:text-light text-lg">{article.content}</p>
-    </article>
-  </Layout>
-);
+const myPortableTextComponents = {
+  types: {
+    code: ({ value }) => (
+      <CustomCodeBlock language={value.language} code={value.code} />
+    ),
+    image: ({ value }) => <Image src={value.imageUrl} alt="img" />,
+  },
+};
+
+const Article = ({ posts }) => {
+  return (
+    <>
+      {posts && posts.map((post, index) => (
+        <Head key={index}>
+          <title>{post.title} | Soumyank Padhy</title>
+          <meta name="description" content={post.shortDescription} />
+        </Head>
+      ))}
+      <TransitionEffect />
+      {posts && posts.map((post, index) => (
+        <AnimatedText key={index} className="max-w-3xl my-8 !text-7xl lg:!text-4xl sm:my-8 sm:!text-4xl xs:!text-3xl" text={post.title} />
+      ))}
+      <article className="max-w-3xl mx-auto mt-0 p-6">
+        <div>
+          {posts && posts.map((post, index) => (
+            <Image
+              key={index}
+              src={post.imageUrl}
+              width={800}
+              height={800}
+              alt='Title Image'
+              priority
+              className='rounded-lg mb-8 border mx-auto'
+            />
+          ))}
+        </div>
+        <div className='prose prose-headings:underline prose-primary prose-xl sm:prose-base dark:prose-invert mx-auto'>
+          {posts && posts.map((post, index) => (
+            <PortableText key={index} className='dark:text-light' value={post.description} components={myPortableTextComponents} />
+          ))}
+        </div>
+      </article>
+    </>
+  )
+};
 
 export async function getStaticPaths() {
+  const query = `*[_type == "post"]{
+    'slug':slug.current,
+  }`;
+
+  const posts = await client.fetch(query);
+
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug }
+  }));
+
   return {
-    paths: [
-      { params: { slug: 'work-life-balance' } },
-    ],
-    fallback: false,
+    paths,
+    fallback: true,
   };
 }
 
-export async function getStaticProps() {
-  // Fetch article data based on slug
-  const article = {
-    title: 'Feature under development Coming Soon...',
-    content: '',
-  };
+
+
+export async function getStaticProps(context) {
+  const slug = context.params.slug
+  const query = `*[_type == "post"  && slug.current == '${slug}']{
+    title,
+    'slug':slug.current,
+    'description':body,
+     shortDescription,
+    'imageUrl': mainImage.asset->url,
+    publishedAt,
+    readTime,
+  }`
+  const posts = await client.fetch(query)
 
   return {
     props: {
-      article,
+      posts,
     },
   };
 }
