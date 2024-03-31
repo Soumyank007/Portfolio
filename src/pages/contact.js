@@ -36,7 +36,7 @@ export default function Contact() {
                 <meta name="description" content="Contact Soumyank Padhy for your queries and lead to a journey of building something big" />
             </Head>
             <TransitionEffect />
-            <main className="flex text-dark w-full min-h-screen dark:text-light sm:items-start xs:py-8 sm:py-16 md:py-24 py-32">
+            <main className="flex text-dark w-full min-h-screen dark:text-light sm:items-start xs:py-4 sm:py-8 md:py-24 py-32">
             <Layout>
             {showAlert && (
             <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md mb-4" role="alert">
@@ -59,7 +59,7 @@ export default function Contact() {
                             name="email"
                             autoComplete="email"
                             required
-                            className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
+                            className="dark:text-dark border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
                         />
                     </div>
                     <div className="block phone=">
@@ -69,7 +69,7 @@ export default function Contact() {
                             type="tel"
                             name="phone"
                             autoComplete="tel"
-                            className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
+                            className="dark:text-dark border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
                         />
                     </div>
                     <div className="name block">
@@ -82,7 +82,7 @@ export default function Contact() {
                                     name="first"
                                     autoComplete="given-name"
                                     required
-                                    className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
+                                    className="dark:text-dark border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
                                 />
                             </div>
                             <div className="w-1/2 pl-2">
@@ -93,14 +93,14 @@ export default function Contact() {
                                     name="last"
                                     autoComplete="family-name"
                                     required
-                                    className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
+                                    className="dark:text-dark border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="message block">
                         <label htmlFor="frm-message">Message</label>
-                        <textarea id="frm-message" rows="6" name="message" className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"></textarea>
+                        <textarea id="frm-message" rows="6" name="message" className="border border-gray-300 dark:text-dark dark:border-gray-600 rounded-md p-2 w-full font-semibold"></textarea>
                     </div>
                     <div className="button flex mt-2 justify-center">
                         <button type="submit" className="md:p-2 md:px-4 md:text-base bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light py-2 ">Submit</button>
