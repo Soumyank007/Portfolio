@@ -7,8 +7,6 @@ import AnimatedText from '@/components/AnimatedText';
 import CustomCodeBlock from '@/components/CustomCodeBlock';
 import Head from 'next/head'
 
-export const revalidate = 30;
-
 const myPortableTextComponents = {
   types: {
     code: ({ value }) => (
@@ -91,6 +89,7 @@ export async function getStaticProps(context) {
     props: {
       posts,
     },
+    revalidate: 30,
   };
 }
 

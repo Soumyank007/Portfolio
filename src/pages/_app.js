@@ -8,8 +8,6 @@ import { Provider } from 'react-redux';
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router';
 
-export const revalidate = 30;
-
 const monserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-mont'
