@@ -27,7 +27,7 @@ const Article = ({ posts }) => {
       ))}
       <TransitionEffect />
       {posts && posts.map((post, index) => (
-        <AnimatedText key={index} className="max-w-3xl my-8 !text-7xl lg:!text-5xl sm:mt-4 sm:my-0 sm:!text-4xl xs:!text-3xl sm:px-2" text={post.title} />
+        <AnimatedText key={index} className="max-w-3xl my-8 !text-7xl lg:!text-5xl sm:mt-8 sm:my-0 sm:!text-4xl xs:!text-3xl sm:px-2" text={post.title} />
       ))}
       <article className="max-w-3xl mx-auto mt-0 p-6">
         <div>
