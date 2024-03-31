@@ -36,6 +36,7 @@ export default function Contact() {
                 <meta name="description" content="Contact Soumyank Padhy for your queries and lead to a journey of building something big" />
             </Head>
             <TransitionEffect />
+            <main className="flex text-dark w-full min-h-screen dark:text-light sm:items-start xs:py-8 sm:py-16 md:py-24 py-32">
             <Layout>
             {showAlert && (
             <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md mb-4" role="alert">
@@ -48,10 +49,10 @@ export default function Contact() {
                         </div>
              </div>
             )}
-                <form className="container bg-white dark:bg-gray-800 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+                <form className="container bg-white dark:bg-gray-800 shadow-lg rounded-lg px-8 pt-6 pb-8" onSubmit={handleSubmit}>
                     <AnimatedText className='mb-8 lg:!text-7xl sm:mb-8 sm:!!text-6xl xs:!text-4xl' text='Get in touch' />
                     <div className="email block">
-                        <label className='dark:text-light' htmlFor="frm-email">Email</label>
+                        <label htmlFor="frm-email">Email</label>
                         <input
                             id="frm-email"
                             type="email"
@@ -62,7 +63,7 @@ export default function Contact() {
                         />
                     </div>
                     <div className="block phone=">
-                        <label className='dark:text-light' htmlFor="frm-phone">Phone</label>
+                        <label htmlFor="frm-phone">Phone</label>
                         <input
                             id="frm-phone"
                             type="tel"
@@ -74,7 +75,7 @@ export default function Contact() {
                     <div className="name block">
                         <div className="flex justify-between">
                             <div className="w-1/2 pr-2">
-                                <label className='dark:text-light' htmlFor="frm-first">First Name</label>
+                                <label htmlFor="frm-first">First Name</label>
                                 <input
                                     id="frm-first"
                                     type="text"
@@ -85,7 +86,7 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="w-1/2 pl-2">
-                                <label className='dark:text-light' htmlFor="frm-last">Last Name</label>
+                                <label htmlFor="frm-last">Last Name</label>
                                 <input
                                     id="frm-last"
                                     type="text"
@@ -98,7 +99,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="message block">
-                        <label className='dark:text-light' htmlFor="frm-message">Message</label>
+                        <label htmlFor="frm-message">Message</label>
                         <textarea id="frm-message" rows="6" name="message" className="border border-gray-300 dark:border-gray-600 rounded-md p-2 w-full font-semibold"></textarea>
                     </div>
                     <div className="button flex mt-2 justify-center">
@@ -106,6 +107,7 @@ export default function Contact() {
                     </div>
                 </form>
             </Layout>
+            </main>
         </>
     );
 }
