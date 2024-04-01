@@ -17,23 +17,26 @@ const myPortableTextComponents = {
 };
 
 const Article = ({ posts }) => {
+  let headTitle = '';
+  let headDescription = '';
+
+  if (posts && posts.length > 0) {
+    headTitle = `${posts[0].title} | Soumyank Padhy`;
+    headDescription = posts[0].shortDescription;
+  }
+
   return (
     <>
-      {posts && posts.map((post, index) => (
-        <Head key={index}>
-          <title>{post.title} | Soumyank Padhy</title>
-          <meta name="description" content={post.shortDescription} />
-        </Head>
-      ))}
+      <Head>
+        <title>{headTitle}</title>
+        <meta name="description" content={headDescription} />
+      </Head>
       <TransitionEffect />
       {posts && posts.map((post, index) => (
-        <AnimatedText key={index} className="max-w-3xl my-8 !text-7xl lg:!text-5xl sm:mt-8 sm:my-0 sm:!text-4xl xs:!text-3xl sm:px-2" text={post.title} />
-      ))}
-      <article className="max-w-3xl mx-auto mt-0 p-6">
-        <div>
-          {posts && posts.map((post, index) => (
+        <div key={index}>
+          <AnimatedText className="max-w-3xl my-8 !text-7xl lg:!text-5xl sm:mt-8 sm:my-0 sm:!text-4xl xs:!text-3xl sm:px-2" text={post.title} />
+          <article className="max-w-3xl mx-auto mt-0 p-6">
             <Image
-              key={index}
               src={post.imageUrl}
               width={800}
               height={800}
@@ -41,14 +44,12 @@ const Article = ({ posts }) => {
               priority
               className='rounded-lg mb-8 border mx-auto'
             />
-          ))}
+            <div className='prose prose-primary prose-xl sm:prose-base dark:prose-invert mx-auto'>
+              <PortableText className='dark:text-light' value={post.description} components={myPortableTextComponents} />
+            </div>
+          </article>
         </div>
-        <div className='prose prose-headings:underline prose-primary prose-xl sm:prose-base dark:prose-invert mx-auto'>
-          {posts && posts.map((post, index) => (
-            <PortableText key={index} className='dark:text-light' value={post.description} components={myPortableTextComponents} />
-          ))}
-        </div>
-      </article>
+      ))}
     </>
   )
 };
@@ -69,8 +70,6 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
-
-
 
 export async function getStaticProps(context) {
   const slug = context.params.slug
