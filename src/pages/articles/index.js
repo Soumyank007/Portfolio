@@ -89,7 +89,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         <FramerImage
         width={640}
         height={640}
-        priority sizes='(max-width:768) 100vw,(max-width:1200px) 50vw,33vw' src={img} alt={title}   className="xs:max-h-[200px] xs:min-h-[200px] sm:max-h-[320px] sm:min-h-[320px] lg:max-h-[320px] lg:min-h-[320px] xl:max-h-[320px] xl:min-h-[320px] max-h-[640px] min-h-[640px] w-full h-auto"
+        priority sizes='(max-width:768) 100vw,(max-width:1200px) 50vw,33vw' src={img} alt={title}   className="xs:max-h-[200px] xs:min-h-[200px] sm:max-h-[320px] sm:min-h-[320px] lg:max-h-[320px] lg:min-h-[320px] xl:max-h-[320px] xl:min-h-[320px] 2xl:max-h-[320px] 2xl:min-h-[320px] max-h-[640px] min-h-[640px] w-full h-auto"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
         />
