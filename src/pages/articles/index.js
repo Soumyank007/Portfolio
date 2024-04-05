@@ -18,7 +18,7 @@ export async function getStaticProps() {
     'imageUrl': mainImage.asset->url,
     publishedAt,
     readTime,
-  }`
+  } | order(publishedAt desc)`
   const posts = await client.fetch(query)
   return {
     props: {
