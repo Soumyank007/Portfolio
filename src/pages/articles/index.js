@@ -8,7 +8,7 @@ import { motion, useMotionValue } from 'framer-motion'
 import TransitionEffect from '@/components/TransitionEffect'
 import { client } from '@/lib/sanityClient'
 import dayjs from 'dayjs'
-const FramerImage = motion(Image);
+const FramerImage = motion.create(Image);
 
 export async function getStaticProps() {
   const query = `*[_type == "post"]{

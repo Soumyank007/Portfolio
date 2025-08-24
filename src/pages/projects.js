@@ -9,12 +9,13 @@ import theyyamImg from '../../public/images/projects/theyyamhome.png';
 import nagarikaImg from '../../public/images/projects/nagarikahome.png';
 import docpuzzleImg from '../../public/images/projects/docpuzzlehome.png';
 import jobportalImg from '../../public/images/projects/jobportal.png';
+import feedxlImg from '../../public/images/projects/feedxlhome.png';
 import rcmsImg from '../../public/images/projects/rcms.png';
 import { useState } from 'react';
 import { motion } from 'framer-motion'
 import TransitionEffect from '@/components/TransitionEffect';
 
-const FramerImage = motion(Image);
+const FramerImage = motion.create(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -130,6 +131,15 @@ const projects = () => {
         <Layout className="pt-16">
           <AnimatedText className="mb-16 lg:!text-7xl sm:mb-8 sm:!!text-6xl xs:!text-4xl" text="Projects i have worked on" />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap:x-16 lg:-gap-x-8 md:gap-y-24 sm:gap-x-0">
+          <div className="col-span-12">
+              <FeaturedProject
+                title="FeedXL"
+                summary={"FeedXL is an independent horse nutrition calculator that analyzes your horse's individual dietary needs and current feed intake. It calculates nutrient requirements, identifies deficiencies or excesses, and helps create balanced diets for all horse types, including those with health conditions"}
+                link="https://feedxl.com/"
+                type="Featured Project | Melluli Technologies"
+                img={feedxlImg}
+              />
+            </div>
             <div className="col-span-12">
               <FeaturedProject
                 title="Theyyam Festival"

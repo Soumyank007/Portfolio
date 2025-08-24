@@ -1,14 +1,7 @@
-import { metadata as studioMetadata, viewport as studioViewport } from 'next-sanity/studio';
 import { Studio } from './Studio';
 
 export const metadata = {
-  ...studioMetadata,
-  title: 'Loading Studio…',
-};
-
-export const viewport = {
-  ...studioViewport,
-  interactiveWidget: 'resizes-content',
+  title: 'Sanity Studio',
 };
 
 export default function StudioPage() {

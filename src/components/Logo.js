@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const Logo = () => {
     const controls = useAnimation();

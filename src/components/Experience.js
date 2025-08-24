@@ -32,6 +32,46 @@ const Experience = () => {
         target: ref,
         offset: ['start end', 'center start']
     })
+
+    const experiences = [
+        {
+            id: 'melluli-fullstack',
+            position: 'Full Stack Developer',
+            company: 'Melluli Technologies',
+            time: 'April 2024 - Present',
+            work: 'Serving as a Full Stack Developer at Melluli Technologies, spearheading the development and maintenance of enterprise-grade web applications for our flagship client, FeedXL. Leading end-to-end development across multiple high-impact projects using React.js, Node.js, TypeScript, Spring Framework, Spring Boot, Hibernate, MySQL, AWS, Docker. Optimized performance, Created robust features and pioneered Test-Driven Development (TDD) practices to ensure code quality and reliability. Collaborated with cross-functional teams to deliver high-performance software solutions while successfully managing client relationships and establishing coding best practices resulting in 40% improved application performance and 95%+ code coverage.',
+            companyLink: 'https://melluli.com/',
+            address: 'Bangalore, India'
+        },
+        {
+            id: 'freelance-fullstack',
+            position: 'Full Stack Developer',
+            company: 'Freelance',
+            time: 'Sept 2023 - Present',
+            work: 'Working as an Freelance developer on a variety of technologies like Next JS, React Native, Node JS, MongoDB, SpingBoot, AWS and more.',
+            companyLink: 'https://upwork.com/freelancers/~01f29fcc909f522214',
+            address: 'Bangalore, India'
+        },
+        {
+            id: 'kemuri-systems-engineer',
+            position: 'Systems Engineer',
+            company: 'Kemuri Technology',
+            time: 'Dec 2022 - Sept 2023',
+            work: 'Developed features for Headless CMS (RCMS) projects, optimizing content management with PHP, JavaScript, and Postgres. Delivered diverse client projects with Nuxt JS, Vue JS, React JS, Node JS, Django, and Flutter. Introduced automated testing (Katalon, Puppeteer) for robust software quality, including real-time testing. Managed servers directly using SSH, created API load testing scripts with Node JS and JMeter. Integrated third-party REST APIs and JavaScript frameworks, resolving intricate code issues through systematic debugging. Implemented GitHub Actions and Docker for efficient CI/CD operations. Applied code optimization techniques for clean, efficient, and high-performance coding.',
+            companyLink: 'https://kemuri.in',
+            address: 'Bangalore, India'
+        },
+        {
+            id: 'kemuri-intern',
+            position: 'Systems Engineer Intern',
+            company: 'Kemuri Technology',
+            time: 'Sept 2022 - Dec 2022',
+            work: 'Significantly contributed to Headless CMS projects, Nuxt JS, Vue JS, and led the development of a Django website from inception to completion.',
+            companyLink: 'https://kemuri.in',
+            address: 'Bangalore, India'
+        }
+    ];
+
     return (
         <div className='my-32'>
             <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
@@ -40,12 +80,18 @@ const Experience = () => {
             <div ref={ref} className='w-[75%] lg:w-[90%] md:w-full mx-auto relative'>
                 <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]' />
                 <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
-                    <Details position='Full Stack Developer' company='Freelance' time='Sept 2023 - Present' work='Working as an Freelance developer on a variety of technologies like Next JS, React Native, Node JS, MongoDB, SpingBoot, AWS and more.'
-                        companyLink='https://upwork.com/freelancers/~01f29fcc909f522214' address='Bangalore,India' />
-                    <Details position='Systems Engineer' company='Kemuri Technology' time='Dec 2022 - Sept 2023' work='Developed features for Headless CMS (RCMS) projects, optimizing content management with PHP, JavaScript, and Postgres. Delivered diverse client projects with Nuxt JS, Vue JS, React JS, Node JS, Django, and Flutter. Introduced automated testing (Katalon, Puppeteer) for robust software quality, including real-time testing. Managed servers directly using SSH, created API load testing scripts with Node JS and JMeter. Integrated third-party REST APIs and JavaScript frameworks, resolving intricate code issues through systematic debugging. Implemented GitHub Actions and Docker for efficient CI/CD operations. Applied code optimization techniques for clean, efficient, and high-performance coding.'
-                        companyLink='https://kemuri.in' address='Bangalore,India' />
-                    <Details position='Systems Engineer Intern' company='Kemuri Technology' time='Sept 2022 - Dec 2022' work='Significantly contributed to Headless CMS projects, Nuxt JS, Vue JS, and led the development of a Django website from inception to completion.'
-                        companyLink='https://kemuri.in' address='Bangalore,India' />
+                    {experiences.map((exp) => (
+                        <Details 
+                            key={exp.id}
+                            id={exp.id}
+                            position={exp.position}
+                            company={exp.company}
+                            time={exp.time}
+                            work={exp.work}
+                            companyLink={exp.companyLink}
+                            address={exp.address}
+                        />
+                    ))}
                 </ul>
             </div>
         </div>
