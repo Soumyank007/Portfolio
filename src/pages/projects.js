@@ -8,7 +8,6 @@ import { GithubIcon } from '@/components/Icons';
 import theyyamImg from '../../public/images/projects/theyyamhome.png';
 import nagarikaImg from '../../public/images/projects/nagarikahome.png';
 import docpuzzleImg from '../../public/images/projects/docpuzzlehome.png';
-import jobportalImg from '../../public/images/projects/jobportal.png';
 import feedxlImg from '../../public/images/projects/feedxlhome.png';
 import rcmsImg from '../../public/images/projects/rcms.png';
 import { useState } from 'react';
