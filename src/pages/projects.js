@@ -140,15 +140,6 @@ const projects = () => {
                 img={feedxlImg}
               />
             </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                title="Theyyam Festival"
-                summary={'Theyyam Festival is a Festival management App created using VueJS, NuxtJS, Tailwind CSS, Kuroco(Headless CMS).'}
-                link="https://theyyamfestival.com"
-                type="Featured Project | Kemuri Technology"
-                img={theyyamImg}
-              />
-            </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Nagarika"
@@ -169,12 +160,11 @@ const projects = () => {
             </div>
             <div className="col-span-12 sm:col-span-12">
               <FeaturedProject
-                title="Job Search Portal"
-                summary="A Full stack job search portal created using React.js, TypeScript, Express JS, NodeJS, MongoDB, REST API's, Redux.js, Material UI.Job searchers can sign up and apply for listed job's while HR's with admin priveleges can list new jobs and access candidate insights through a interactive dashboard."
-                link="https://job-search-portal-ashy.vercel.app"
-                type="Featured Project | Personal"
-                img={jobportalImg}
-                github="https://github.com/Soumyank007/Job-search-portal"
+                  title="Theyyam Festival"
+                  summary={'Theyyam Festival is a Festival management App created using VueJS, NuxtJS, Tailwind CSS, Kuroco(Headless CMS).'}
+                  link="https://theyyamfestival.com"
+                  type="Featured Project | Kemuri Technology"
+                  img={theyyamImg}
               />
             </div>
             <div className="col-span-6 sm:col-span-12 col-start-4">
