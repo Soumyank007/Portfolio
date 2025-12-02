@@ -38,7 +38,7 @@ const Experience = () => {
             id: 'nyxalabs-founder',
             position: 'Founder & Senior Software Engineer',
             company: 'NyxaLabs',
-            time: 'Present',
+            time: 'Sept 2025 - Present',
             work: 'Founded and leading NyxaLabs, a software development firm specializing in cutting-edge custom applications, AI solutions, and digital experiences. Architecting and delivering end-to-end solutions across web, mobile, and AI/ML platforms using React, TypeScript, Next.js, Node.js, Python, Go, React Native, Flutter, and cloud infrastructure (AWS). Successfully delivered 150+ projects for 50+ satisfied clients, building custom software applications, implementing AI and RAG systems, developing responsive web applications, creating native and cross-platform mobile apps, and delivering Shopify e-commerce solutions. Established agile development practices, 24/7 support operations, and comprehensive quality assurance processes while managing client relationships and driving business growth.',
             companyLink: 'https://nyxalabs.com',
             address: 'Bangalore, India'
@@ -56,7 +56,7 @@ const Experience = () => {
             id: 'freelance-fullstack',
             position: 'Full Stack Developer',
             company: 'Freelance',
-            time: 'Sept 2023 - Present',
+            time: 'Sept 2023 - April 2024',
             work: 'Working as an Freelance developer on a variety of technologies like Next JS, React Native, Node JS, MongoDB, SpingBoot, AWS and more.',
             companyLink: 'https://upwork.com/freelancers/~01f29fcc909f522214',
             address: 'Bangalore, India'
