@@ -3,7 +3,7 @@ import Logo from './Logo'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon, UpworkIcon } from './Icons'
+import { GithubIcon, GitLabIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon, UpworkIcon } from './Icons'
 import useThemeSwitcher from '@/hooks/useThemeSwitcher'
 import { useDispatch } from 'react-redux';
 import { toggleTheme } from '@/store/reducers/themeSlice';
@@ -68,6 +68,12 @@ const NavBar = () => {
             className='w-6 mx-3'>
             <GithubIcon />
           </motion.a>
+          <motion.a aria-label="GitLabIcon" href="https://gitlab.com/soumyank.padhy" target={'_blank'}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className='w-6 mx-3'>
+            <GitLabIcon />
+          </motion.a>
           <motion.a aria-label="UpworkIcon" href="https://upwork.com/freelancers/~01f29fcc909f522214" target={'_blank'}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -120,6 +126,12 @@ const NavBar = () => {
                 whileTap={{ scale: 0.9 }}
                 className='w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1'>
                 <GithubIcon />
+              </motion.a>
+              <motion.a aria-label="GitLabIcon" href="https://gitlab.com/soumyank.padhy" target={'_blank'}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className='w-6 mx-3 sm:mx-1'>
+                <GitLabIcon />
               </motion.a>
               <motion.a aria-label="UpworkIcon" href="https://upwork.com/freelancers/~01f29fcc909f522214" target={'_blank'}
                 whileHover={{ y: -2 }}

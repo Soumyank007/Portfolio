@@ -557,6 +557,47 @@ export const CircularTextInverted = ({ className, ...rest }) => (
   <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className={`${className} animate-spin-slow`} {...rest} src='/images/circular-text-inverted.png' alt='image' width='496' height='496'></Image>
 );
 
+export const GitLabIcon = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 256 256"
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path
+      fill="#E24329"
+      d="m128 237.8l36.6-112.8H91.4z"
+    />
+    <path
+      fill="#FC6D26"
+      d="m128 237.8l-36.6-112.8H18.6z"
+    />
+    <path
+      fill="#FCA326"
+      d="M18.6 125 1.9 177.4a9.8 9.8 0 0 0 3.5 10.9l122.6 89.5z"
+    />
+    <path
+      fill="#E24329"
+      d="M18.6 125h72.8L61.7 26.5a5 5 0 0 0-9.5 0z"
+    />
+    <path
+      fill="#FC6D26"
+      d="m128 237.8l36.6-112.8h72.8z"
+    />
+    <path
+      fill="#FCA326"
+      d="m237.4 125l16.7 52.4a9.8 9.8 0 0 1-3.5 10.9l-122.6 89.5z"
+    />
+    <path
+      fill="#E24329"
+      d="M237.4 125h-72.8l29.7-98.5a5 5 0 0 1 9.5 0z"
+    />
+  </svg>
+);
+
 export const LinkArrow = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
