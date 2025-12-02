@@ -35,10 +35,19 @@ const Experience = () => {
 
     const experiences = [
         {
+            id: 'nyxalabs-founder',
+            position: 'Founder & Senior Software Engineer',
+            company: 'NyxaLabs',
+            time: 'Present',
+            work: 'Founded and leading NyxaLabs, a software development firm specializing in cutting-edge custom applications, AI solutions, and digital experiences. Architecting and delivering end-to-end solutions across web, mobile, and AI/ML platforms using React, TypeScript, Next.js, Node.js, Python, Go, React Native, Flutter, and cloud infrastructure (AWS). Successfully delivered 150+ projects for 50+ satisfied clients, building custom software applications, implementing AI and RAG systems, developing responsive web applications, creating native and cross-platform mobile apps, and delivering Shopify e-commerce solutions. Established agile development practices, 24/7 support operations, and comprehensive quality assurance processes while managing client relationships and driving business growth.',
+            companyLink: 'https://nyxalabs.com',
+            address: 'Bangalore, India'
+        },
+        {
             id: 'melluli-fullstack',
             position: 'Full Stack Developer',
             company: 'Melluli Technologies',
-            time: 'April 2024 - Present',
+            time: 'April 2024 - Sept 2025',
             work: 'Serving as a Full Stack Developer at Melluli Technologies, spearheading the development and maintenance of enterprise-grade web applications for our flagship client, FeedXL. Leading end-to-end development across multiple high-impact projects using React.js, Node.js, TypeScript, Spring Framework, Spring Boot, Hibernate, MySQL, AWS, Docker. Optimized performance, Created robust features and pioneered Test-Driven Development (TDD) practices to ensure code quality and reliability. Collaborated with cross-functional teams to deliver high-performance software solutions while successfully managing client relationships and establishing coding best practices resulting in 40% improved application performance and 95%+ code coverage.',
             companyLink: 'https://melluli.com/',
             address: 'Bangalore, India'
