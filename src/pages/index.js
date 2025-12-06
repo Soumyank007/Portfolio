@@ -26,6 +26,7 @@ export default function Home() {
             <div className="w-1/3 md:w-[20rem] relative md:mb-4">
               <Image
                 priority
+                fetchPriority="high"
                 sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw'
                 src={profilePic}
                 alt='alt'

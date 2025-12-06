@@ -550,11 +550,11 @@ export const MoonIcon = ({ className, ...rest }) => (
 );
 
 export const CircularText = ({ className, ...rest }) => (
-  <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className={`${className} animate-spin-slow`} {...rest} src='/images/circular-text.png' alt='image' width='496' height='496'></Image>
+  <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className={`${className} animate-spin-slow`} {...rest} src='/images/circular-text.png' alt='image' width='200' height='200'></Image>
 );
 
 export const CircularTextInverted = ({ className, ...rest }) => (
-  <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className={`${className} animate-spin-slow`} {...rest} src='/images/circular-text-inverted.png' alt='image' width='496' height='496'></Image>
+  <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className={`${className} animate-spin-slow`} {...rest} src='/images/circular-text-inverted.png' alt='image' width='200' height='200'></Image>
 );
 
 export const GitLabIcon = ({ className, ...rest }) => (
