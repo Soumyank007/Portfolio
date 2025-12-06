@@ -22,7 +22,7 @@
     "@tsparticles/react": "^3.0.0",
     "dayjs": "^1.11.13",
     "framer-motion": "^12.23.12",
-    "next": "^15.5.0",
+    "next": "^16.0.7",
     "next-sanity": "^10.0.13",
     "nodemailer": "^7.0.5",
     "npm": "^11.5.2",
