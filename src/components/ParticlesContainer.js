@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import { loadSlim } from 'tsparticles-slim';
 import { useSelector } from 'react-redux';
 
 const ParticlesContainer = () => {
@@ -8,7 +8,7 @@ const ParticlesContainer = () => {
     const colorValue = darkMode ? '#F5F5F5' : '#000000';
 
     const particlesInit = useCallback(async (engine) => {
-        await loadFull(engine);
+        await loadSlim(engine);
     }, []);
 
     const particlesLoaded = useCallback(async () => {}, [])

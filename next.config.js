@@ -16,7 +16,7 @@ const nextConfig = {
     },
     // Optimize for modern browsers
     experimental: {
-      optimizePackageImports: ['framer-motion', '@reduxjs/toolkit', 'react-syntax-highlighter'],
+      optimizePackageImports: ['framer-motion', '@reduxjs/toolkit', 'react-syntax-highlighter', 'tsparticles-slim'],
     },
 }
 
