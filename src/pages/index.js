@@ -42,7 +42,7 @@ export default function Home() {
                 With a knack for Full-stack wizardry, I specialize in bringing your ideas to life through interactive web and mobile applications. Dive into my latest projects and insightful articles, highlighting my expertise in app development and design.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/Soumyank_Padhy_Resume(Dec-2025).pdf" className='md:p-2 md:px-4 md:text-base flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light' target={'blank'}>Resume<LinkArrow className={'w-6 ml-1'} /></Link>
+                <Link href="/Soumyank_Padhy_Resume.pdf" className='md:p-2 md:px-4 md:text-base flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light' target={'blank'} download>Resume<LinkArrow className={'w-6 ml-1'} /></Link>
               </div>
             </div>
           </div>
